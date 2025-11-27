@@ -2,8 +2,8 @@
 
     <PropertyGroup>
         <TargetFramework>net48</TargetFramework>
-        <AssemblyName>UltimateMovement</AssemblyName>
-        <Product>UltimateMovement</Product>
+        <AssemblyName>EnhancedMovement</AssemblyName>
+        <Product>EnhancedMovement</Product>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <LangVersion>latest</LangVersion>
         <RestoreAdditionalProjectSources>
@@ -11,13 +11,11 @@
             https://nuget.bepinex.dev/v3/index.json;
             https://nuget.samboy.dev/v3/index.json
         </RestoreAdditionalProjectSources>
-        <RootNamespace>UltimateMovement</RootNamespace>
+        <RootNamespace>EnhancedMovement</RootNamespace>
 
-        <!-- Git tags must strart with v -->
         <MinVerTagPrefix>v</MinVerTagPrefix>
     </PropertyGroup>
 
-    <!-- Set BepInEx plugin version according to MinVer -->
     <Target Name="SetModVersion" BeforeTargets="AddGeneratedFile" DependsOnTargets="MinVer">
         <PropertyGroup>
             <PlainVersion>$(MinVerMajor).$(MinVerMinor).$(MinVerPatch)</PlainVersion>
@@ -29,18 +27,19 @@
         <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
         <PackageReference Include="BepInEx.Core" Version="5.*" />
         <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" />
+        <PackageReference Include="GitVersion.MsBuild" Version="6.4.0">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="MinVer" Version="6.1.0-beta.1">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
         <PackageReference Include="UnityEngine.Modules" Version="2022.3.53" IncludeAssets="compile" />
         <PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.4.3">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-
-        <PackageReference Include="MinVer" Version="6.0.0">
-            <PrivateAssets>all</PrivateAssets>
-            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-        </PackageReference>
-
-        <PackageReference Include="YamlDotNet" Version="16.3.0" />
     </ItemGroup>
 
     <!-- Only keep mod dll -->

@@ -3,9 +3,9 @@ schemaVersion = "0.0.1"
 
 [package]
 namespace = "Sparroh"
-name = "UltimateMovement"
+name = "EnhancedMovement"
 description = "*WARNING* (This is a cheat mod) Enables ability to Fire and Aim while Sprinting and Sliding for fluid gameplay. Also enables Aim while Reloading and Wallrunning."
-websiteUrl = "https://github.com/Little-Sparroh/FireWhileSprinting"
+websiteUrl = "https://github.com/Little-Sparroh/EnhancedMovement"
 containsNsfwContent = false
 
 [package.dependencies]
@@ -17,8 +17,8 @@ readme = "README.md"
 outdir = "build"
 
 [[build.copy]]
-source = "bin/Release/net48/UltimateMovement.dll"
-target = "BepInEx/plugins/UltimateMovement.dll"
+source = "bin/Release/net48/EnhancedMovement.dll"
+target = "BepInEx/plugins/EnhancedMovement.dll"
 
 [[build.copy]]
 source = "CHANGELOG.md"
@@ -34,5 +34,3 @@ communities = [ "mycopunk" ]
 
 [publish.categories]
 mycopunk = [ "client" ]
-
-

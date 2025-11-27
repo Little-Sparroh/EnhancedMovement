@@ -1,4 +1,4 @@
-# UltimateMovement
+# EnhancedMovement
 
 A BepInEx mod for MycoPunk that provides comprehensive movement system enhancements and refinements.
 
@@ -31,12 +31,12 @@ dotnet build --configuration Release
 
 **Option 1: Via Thunderstore (Recommended)**
 1. Download and install using the Thunderstore Mod Manager
-2. Search for "UltimateMovement" under MycoPunk community
+2. Search for "EnhancedMovement" under MycoPunk community
 3. Install and enable the mod
 
 **Option 2: Manual Installation**
 1. Ensure BepInEx is installed for MycoPunk
-2. Copy `UltimateMovement.dll` from the build folder
+2. Copy `EnhancedMovement.dll` from the build folder
 3. Place it in `<MycoPunk Game Directory>/BepInEx/plugins/`
 4. Launch the game
 
